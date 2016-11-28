@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MyCategory" representedClassName="MyCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="topics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MyTopic" inverseName="category" inverseEntity="MyTopic" syncable="YES"/>
+    </entity>
+    <entity name="MyTopic" representedClassName="Topic" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="usage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MyCategory" inverseName="topics" inverseEntity="MyCategory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MyCategory" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="MyTopic" positionX="115" positionY="-42" width="128" height="103"/>
+    </elements>
+</model>
